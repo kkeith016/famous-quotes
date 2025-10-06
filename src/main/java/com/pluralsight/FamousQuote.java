@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class FamousQuote {
     public static void main(String[] args) {
+        boolean running = true;
+
+        try{
         Scanner scan = new Scanner(System.in);
         //Quotes list
 
@@ -29,7 +32,6 @@ public class FamousQuote {
                 System.out.println(quotes[choice - 1]);
 
                 //if not one of the numbers between 1 and 10 display invalid
-
             } else {
                 System.out.println("\n Invalid number! Please choose between 1 and 10.");
             }
@@ -42,9 +44,14 @@ public class FamousQuote {
 
             if (!again.equals("yes") && !again.equals("y")) {
                 System.out.println("\nGoodbye! Stay inspired! ");
-                break;
+                break;}
+
+            running = false;
             }
 
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Issue with Quote, please try again.");
         }
     }
 }
