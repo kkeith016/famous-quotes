@@ -48,7 +48,6 @@ public class FamousQuote {
 
             running = false;
             }
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Issue with Quote, please try again.");
