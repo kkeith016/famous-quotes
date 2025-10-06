@@ -44,6 +44,7 @@ public class FamousQuote {
                 System.out.println("\nGoodbye! Stay inspired! ");
                 break;
             }
+
         }
     }
 }
