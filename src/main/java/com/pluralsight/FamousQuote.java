@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class FamousQuote {
     public static void main(String[] args) {
-        boolean running = true;
-
-        try{
         Scanner scan = new Scanner(System.in);
-        //Quotes list
 
-        String[] quotes = {"The only way to do great work is to love what you do. – Steve Jobs",
+        // Quotes list
+        String[] quotes = {
+                "The only way to do great work is to love what you do. – Steve Jobs",
                 "In the middle of every difficulty lies opportunity. – Albert Einstein",
                 "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
                 "Do or do not. There is no try. – Yoda",
@@ -19,16 +17,34 @@ public class FamousQuote {
                 "Act as if what you do makes a difference. It does. – William James",
                 "Don’t watch the clock; do what it does. Keep going. – Sam Levenson",
                 "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
-                "You miss 100% of the shots you don’t take. – Wayne Gretzky"};
+                "You miss 100% of the shots you don’t take. – Wayne Gretzky"
+        };
 
-        System.out.print("Select a quote (0 - 10) ");
-        int index = scan.nextInt();
-        System.out.print(quotes[index]);
+        while (true) {
+            System.out.print("\nEnter a number between 1 and 10 to see a quote: ");
 
-            running = false;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Issue with Quote, please try again.");
+            try {
+                int choice = scan.nextInt();
+
+                if (choice >= 1 && choice <= 10) {
+                    System.out.println("\nQuote #" + choice + ":");
+                    System.out.println(quotes[choice - 1]);
+                } else {
+                    System.out.println("\nInvalid number! Please choose between 1 and 10.");
+                }
+
+            } catch (Exception e) {
+                System.out.println("\nInvalid input! Please enter a number.");
+                scan.nextLine(); // clear the invalid input
+            }
+
+            System.out.print("\nWould you like to see another quote? (yes/no): ");
+            String again = scan.next().toLowerCase();
+
+            if (!again.equals("yes") && !again.equals("y")) {
+                System.out.println("\nGoodbye! Stay inspired!");
+                break;
+            }
         }
     }
 }
