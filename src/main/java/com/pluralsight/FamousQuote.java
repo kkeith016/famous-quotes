@@ -22,17 +22,17 @@ public class FamousQuote {
             int choice = scan.nextInt();
 
             if (choice >= 1 && choice <= 10) {
-                System.out.println("\n✨ Quote #" + choice + ":");
+                System.out.println("\n Quote #" + choice + ":");
                 System.out.println(quotes[choice - 1]);
             } else {
-                System.out.println("\n⚠️ Invalid number! Please choose between 1 and 10.");
+                System.out.println("\n Invalid number! Please choose between 1 and 10.");
             }
 
             System.out.print("\nWould you like to see another quote? (yes/no): ");
             String again = scan.next().toLowerCase();
 
             if (!again.equals("yes") && !again.equals("y")) {
-                System.out.println("\nGoodbye! Stay inspired! 🌟");
+                System.out.println("\nGoodbye! Stay inspired! ");
                 break;
             }
         }
