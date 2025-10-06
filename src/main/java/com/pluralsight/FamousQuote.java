@@ -7,5 +7,6 @@ public class FamousQuote {
         Scanner scan = new Scanner(System.in);
 
 
+
     }
 }
