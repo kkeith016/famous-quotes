@@ -21,7 +21,7 @@ public class FamousQuote {
                 "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
                 "You miss 100% of the shots you don’t take. – Wayne Gretzky"};
 
-        System.out.print("Select a quote (0 - 10)");
+        System.out.print("Select a quote (0 - 10) ");
         int index = scan.nextInt();
         System.out.print(quotes[index]);
 
