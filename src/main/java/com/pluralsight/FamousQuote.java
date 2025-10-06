@@ -21,33 +21,11 @@ public class FamousQuote {
                 "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
                 "You miss 100% of the shots you don’t take. – Wayne Gretzky"};
 
-        while (true) {
-            System.out.print("\nEnter a number between 1 and 10 to see a quote: ");
-            int choice = scan.nextInt();
-
-            //If choice is between 1 and 10 than Display Quote # + Choice
-
-            if (choice >= 1 && choice <= 10) {
-                System.out.println("\n Quote #" + choice + ":");
-                System.out.println(quotes[choice - 1]);
-
-                //if not one of the numbers between 1 and 10 display invalid
-            } else {
-                System.out.println("\n Invalid number! Please choose between 1 and 10.");
-            }
-            //Ask if wanting another quote
-
-            System.out.print("\nWould you like to see another quote? (yes/no): ");
-            String again = scan.next().toLowerCase();
-
-            //Making sure all formats are accepted that if they don't put some form of yes or Y then they get a goodbye
-
-            if (!again.equals("yes") && !again.equals("y")) {
-                System.out.println("\nGoodbye! Stay inspired! ");
-                break;}
+        System.out.print("Select a quote (0 - 10)");
+        int index = scan.nextInt();
+        System.out.print(quotes[index]);
 
             running = false;
-            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Issue with Quote, please try again.");
