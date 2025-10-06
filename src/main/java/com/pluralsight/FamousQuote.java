@@ -20,6 +20,17 @@ public class FamousQuote {
                 "You miss 100% of the shots you don’t take. – Wayne Gretzky"
         };
 
+        /* while (/user has more input/)
+           try {
+              read user input
+              parse the input num
+              process normally
+              } catch (Exception e){
+              Inform user something went wrong
+              Continue to next loop iteration
+              } <--- this povided to me by Obi Java Kenobi
+         */
+
         while (true) {
             System.out.print("\nEnter a number between 1 and 10 to see a quote: ");
 
