@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class FamousQuote {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        //Quotes list
 
         String[] quotes = {"The only way to do great work is to love what you do. – Steve Jobs",
                 "In the middle of every difficulty lies opportunity. – Albert Einstein",
@@ -21,15 +22,23 @@ public class FamousQuote {
             System.out.print("\nEnter a number between 1 and 10 to see a quote: ");
             int choice = scan.nextInt();
 
+            //If choice is between 1 and 10 than Display Quote # + Choice
+
             if (choice >= 1 && choice <= 10) {
                 System.out.println("\n Quote #" + choice + ":");
                 System.out.println(quotes[choice - 1]);
+
+                //if not one of the numbers between 1 and 10 display invalid
+
             } else {
                 System.out.println("\n Invalid number! Please choose between 1 and 10.");
             }
+            //Ask if wanting another quote
 
             System.out.print("\nWould you like to see another quote? (yes/no): ");
             String again = scan.next().toLowerCase();
+
+            //Making sure all formats are accepted that if they don't put some form of yes or Y then they get a goodbye
 
             if (!again.equals("yes") && !again.equals("y")) {
                 System.out.println("\nGoodbye! Stay inspired! ");
@@ -37,6 +46,4 @@ public class FamousQuote {
             }
         }
     }
-
-
 }
